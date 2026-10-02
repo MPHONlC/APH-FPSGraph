@@ -1,7 +1,7 @@
 APH-FPSGraph - Changelog
 ========================
 
-Version: 2026.09.30.23.19 (26093023)
+Version: 2026.10.03.06.13 (26100306)
 ---------------------------
 
   - Initial public release.

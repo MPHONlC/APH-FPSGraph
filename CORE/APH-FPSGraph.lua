@@ -11,7 +11,7 @@ APHFPSGraphCore = APHFPSGraphCore or {}
 local FG = APHFPSGraphCore
 
 FG.name = "APH-FPSGraph"
-FG.VERSION = "2026.09.30.23.19"
+FG.VERSION = "2026.10.03.06.13"
 
 function FG.L(key, ...)
 	local id = _G["SI_APHFPS_" .. key]

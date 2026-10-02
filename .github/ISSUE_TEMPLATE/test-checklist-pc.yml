@@ -1,0 +1,90 @@
+name: ✅ APH-FPSGraph Test Checklist (PC)
+description: Run through APH-FPSGraph's PC test checklist and report results
+title: '[TEST][PC] '
+labels:
+- testing
+assignees:
+- MPHONlC
+body:
+- type: markdown
+  attributes:
+    value: Thanks for testing **APH-FPSGraph** on PC! Check off everything you actually tested and confirmed working. Anything broken or partly working, describe it in the notes field at the end instead of checking it off.
+- type: input
+  id: version
+  attributes:
+    label: Add-on version
+    placeholder: e.g. 2026.09.29.21.48
+  validations:
+    required: true
+- type: dropdown
+  id: platform
+  attributes:
+    label: Platform
+    options:
+    - PC (NA)
+    - PC (EU)
+    - PC (PTS)
+  validations:
+    required: true
+- type: checkboxes
+  id: pc_tests
+  attributes:
+    label: PC tests confirmed working
+    options:
+    - label: 'Show and hide: Type /fpsgraph twice.'
+    - label: 'Keybinds: In Controls bind Show/Hide the FPS Graph and Reset the FPS Graph Numbers, then press them.'
+    - label: 'Numbers: Show the graph and play for a minute.'
+    - label: 'Bars: Watch the graph for a few seconds, then do something that drops frames (open and close the map).'
+    - label: 'Header: Look at the window''s header.'
+    - label: 'Dropped frames: Set Target FPS to the frame rate you normally hold, then open and close the map.'
+    - label: 'Grey losses: Set Target FPS above what you get (for example 144 while you get 60) and watch the numbers.'
+    - label: 'Loading screens: Travel to a wayshrine, then look at the numbers.'
+    - label: 'Stutter count: Set Count a stutter at (ms) to 20, then open and close the map a few times.'
+    - label: 'Record: Right-click the graph and pick Start recording, play a minute, then right-click and pick Stop recording.'
+    - label: 'Record by command: Type /fpsgraph record, then /fpsgraph stop, then /fpsgraph stop again.'
+    - label: 'Record from settings: In settings press Start recording, then Stop recording.'
+    - label: 'Summary window: Record a session, then right-click the graph and pick Summary.'
+    - label: 'Timeline window: Right-click the graph and pick Timeline.'
+    - label: 'Timeline zoom: Over the timeline scroll the mouse wheel, drag left and right, press Zoom In, Zoom Out and Full, and hover a bar.'
+    - label: 'Earlier results: Record two sessions, /reloadui, right-click the graph, set Showing to the older one, then to This run.'
+    - label: 'Compare: Right-click, set Compare against to the other recording with both windows open, then set it to nothing.'
+    - label: 'Results in settings: In settings press Open the summary, then Open the timeline.'
+    - label: 'Delete recordings: Right-click and pick Delete the last recording, then Delete all recordings, then /reloadui.'
+    - label: 'Report: On a fresh login type /fpsgraph report, play a minute, then type it again.'
+    - label: 'Chat Logs: Turn off Chat Logs, start and stop a recording, then type /fpsgraph report. Turn it back on.'
+    - label: 'Reset numbers: Type /fpsgraph reset.'
+    - label: 'Settings buttons: In settings press Reset the numbers.'
+    - label: 'Graph length: Set Graph length to 30, 60 and 120 seconds.'
+    - label: 'Update speed: Set Update every to 0.25 s, 0.5 s and 1 s.'
+    - label: 'Target FPS: Move Target FPS to 30, then 144.'
+    - label: 'Graph top: Set Graph top to Automatic, then to 60.'
+    - label: 'Show options: Turn Show 1% and 0.1% lows, Show frame time, Show ping and Show add-on memory (Lua and pool) off and on.'
+    - label: 'Ping detail: Turn on Show ping and play for a minute, then set Ping counts as high above (ms) below your ping.'
+    - label: 'Axis labels inside: Make the window as small as it goes, then large.'
+    - label: 'Show the graph: Turn off Show the graph, then turn it on.'
+    - label: 'Opacity: Move Window opacity, Graph opacity and Text opacity one at a time to 0 and back to 100.'
+    - label: 'Size sliders: Change Window width and Window height.'
+    - label: 'Show in menus: Turn on Show in menus too and open the inventory; turn it off and open it again.'
+    - label: 'Measure while hidden: Turn on Keep measuring while hidden, hide the graph, play a minute, then /fpsgraph report.'
+    - label: 'Reset to defaults: Change several settings and press RESET TO DEFAULTS.'
+    - label: 'Resize: Drag the window''s edge bigger and smaller, then /reloadui.'
+    - label: 'Move: Drag the window somewhere else, /reloadui, then press Reset the position in settings.'
+    - label: 'Lock: Turn on Lock the window in place and try to drag or resize it.'
+    - label: 'Close button: Press the X on the header, then /reloadui.'
+    - label: 'Missing settings library: On a fresh install disable LibAddonMenu-2.0 and reload.'
+    - label: 'No cost: Note your FPS with the graph hidden, then shown, in the same spot.'
+    - label: 'Live graph zoom: Hover the graph and turn the mouse wheel, drag left and right on it, then right-click and pick Full.'
+    - label: 'Dangerous buttons: Hover the warning icons next to Delete the last recording, Delete all recordings, Reset the position, Reset the numbers and Reset to Defaults, then click one.'
+    - label: 'Resize the summary: Open the summary and drag its edge or corner bigger and smaller, then reload.'
+    - label: 'Close button on hover: Move the mouse away from the graph window, then over it, the graph and the X button.'
+    - label: 'Detail level: Turn the graph off, then pick each Detail level: FPS single value, FPS details, FPS and frame time details, Full details.'
+    - label: 'Screen position: Pick each Screen position from Top-left to Bottom-right, then drag the window.'
+    - label: 'Text follows the screen edge: With the graph off, place the window on the left, middle and right of the screen.'
+    - label: 'Pinned positions: Pick Top-right as the Screen position and try to drag the window, then pick Where I put it and drag it.'
+    - label: 'Text follows while dragging: With the graph off, drag the window slowly from the left edge to the right edge.'
+- type: textarea
+  id: notes
+  attributes:
+    label: Anything broken, partly working, or not tested
+    description: 'One line per issue: which test, what happened instead of Expected.'
+    placeholder: 'e.g. PC-L-04 Bug report: popup opened but API version line was blank'

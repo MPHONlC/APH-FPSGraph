@@ -4,7 +4,7 @@
 ## Author: |ca500f3A|r|cb400e6P|r|cc300daH|r|cd200cdO|r|ce100c1NlC|r
 ## APIVersion: 101050 101051
 ## SavedVariables: APHFPSGraph
-## DependsOn: LibAPH>=26092921
+## DependsOn: LibAPH>=26100306
 ## OptionalDependsOn: LibAddonMenu-2.0 LibHarvensAddonSettings
 ## Description: |cfa9c1bA frame-rate graph that times every frame: average, 1% and 0.1% lows, frame time, stutters and ping, with the window, graph and text each at their own transparency.|r |cCCFF00Usage: /fpsgraph|r
 

@@ -1,0 +1,84 @@
+name: "\u2705 APH-FPSGraph Test Checklist (Console)"
+description: Run through APH-FPSGraph's Console test checklist and report results
+title: '[TEST][Console] '
+labels:
+- testing
+assignees:
+- MPHONlC
+body:
+- type: markdown
+  attributes:
+    value: Thanks for testing **APH-FPSGraph** on Console! Check off everything you actually tested and confirmed working. Anything broken or partly working, describe it in the notes field at the end instead of checking it off.
+- type: input
+  id: version
+  attributes:
+    label: Add-on version
+    placeholder: e.g. 2026.09.29.21.48
+  validations:
+    required: true
+- type: dropdown
+  id: platform
+  attributes:
+    label: Platform
+    options:
+    - Console (Xbox)
+    - Console (PlayStation)
+  validations:
+    required: true
+- type: checkboxes
+  id: console_tests
+  attributes:
+    label: Console tests confirmed working
+    options:
+    - label: 'Show and hide: In APH-FPSGraph settings turn Show the graph off and on.'
+    - label: 'Numbers: Show the graph and play for a minute.'
+    - label: 'Bars: Watch the graph for a few seconds, then do something that drops frames (open and close the map).'
+    - label: 'Header: Look at the window''s header.'
+    - label: 'Dropped frames: Set Target FPS to the frame rate you normally hold, then open and close the map.'
+    - label: 'Grey losses: Set Target FPS above what you get (for example 144 while you get 60) and watch the numbers.'
+    - label: 'Loading screens: Travel to a wayshrine, then look at the numbers.'
+    - label: 'Stutter count: Set Count a stutter at (ms) to 20, then open and close the map a few times.'
+    - label: 'Record: In settings press Start recording, play a minute, then press Stop recording.'
+    - label: 'Record by command: Type /fpsgraph record, then /fpsgraph stop, then /fpsgraph stop again.'
+    - label: 'Controller control: In APH-FPSGraph settings press Open the summary.'
+    - label: 'Controller buttons: Press X, X, RB, RT, LT, D-pad left and right, then Y, move with the D-pad and press A.'
+    - label: 'Back button: With the menu, timeline and summary open, press B until nothing changes.'
+    - label: 'Move and resize windows: With the timeline in front press R3, move the right stick, press B, then L3 and move the left stick.'
+    - label: 'Control key: Bind Control the FPS Graph in Controls, then press it while playing, and press B.'
+    - label: 'Summary and timeline: While in control press LB, then RB.'
+    - label: 'Earlier results: Record two sessions, /reloadui, take control, press Y and set Showing to the older one, then to This run.'
+    - label: 'Compare: Press Y and set Compare against to the other recording, then to nothing.'
+    - label: 'Delete recordings: In settings press Delete the last recording, then Delete all recordings, then /reloadui.'
+    - label: 'Report: On a fresh login type /fpsgraph report, play a minute, then type it again.'
+    - label: 'Chat Logs: Turn off Chat Logs, start and stop a recording, then type /fpsgraph report. Turn it back on.'
+    - label: 'Reset numbers: Type /fpsgraph reset.'
+    - label: 'Settings buttons: In settings press Reset the numbers.'
+    - label: 'Graph length: Set Graph length to 30, 60 and 120 seconds.'
+    - label: 'Update speed: Set Update every to 0.25 s, 0.5 s and 1 s.'
+    - label: 'Target FPS: Move Target FPS to 30, then 144.'
+    - label: 'Graph top: Set Graph top to Automatic, then to 60.'
+    - label: 'Show options: Turn Show 1% and 0.1% lows, Show frame time, Show ping and Show add-on memory (Lua and pool) off and on.'
+    - label: 'Ping detail: Turn on Show ping and play for a minute, then set Ping counts as high above (ms) below your ping.'
+    - label: 'Axis labels inside: Make the window as small as it goes, then large.'
+    - label: 'Show the graph: Turn off Show the graph, then turn it on.'
+    - label: 'Opacity: Move Window opacity, Graph opacity and Text opacity one at a time to 0 and back to 100.'
+    - label: 'Size sliders: Change Window width and Window height.'
+    - label: 'Show in menus: Turn on Show in menus too and open the inventory; turn it off and open it again.'
+    - label: 'Measure while hidden: Turn on Keep measuring while hidden, hide the graph, play a minute, then /fpsgraph report.'
+    - label: 'Reset to defaults: Change several settings and press RESET TO DEFAULTS.'
+    - label: 'Move: In settings press Move the window, move it with the right stick, then press Reset the position.'
+    - label: 'Missing settings library: On a fresh install disable LibHarvensAddonSettings and reload.'
+    - label: 'Controls when it opens: Turn on Show the window in the settings and close the menu.'
+    - label: 'Last window opened: Open the summary (LB), then the timeline (RB), then the summary again, then press B a few times.'
+    - label: 'Live graph zoom: With the graph in control, press LT and RT, then left and right.'
+    - label: 'Back from a menu: While the graph has the controller, open and close the inventory. Then press B on the graph and open and close the inventory again.'
+    - label: 'Resize the summary: Open the summary (LB) and press L3, then move the left stick.'
+    - label: 'Red dangerous buttons: Open the settings and look at Delete the last recording, Delete all recordings, Reset the position and Reset the numbers.'
+    - label: 'Detail level and position: Pick each Detail level and each Screen position in the settings, then move the window with the right stick.'
+    - label: 'Pinned positions: Pick Bottom-left as the Screen position, then press the move button.'
+- type: textarea
+  id: notes
+  attributes:
+    label: Anything broken, partly working, or not tested
+    description: 'One line per issue: which test, what happened instead of Expected.'
+    placeholder: 'e.g. PC-L-04 Bug report: popup opened but API version line was blank'

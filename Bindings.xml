@@ -1,0 +1,61 @@
+<Bindings>
+    <Layer name="SI_KEYBINDINGS_LAYER_GENERAL">
+        <Category name="APH-FPSGraph">
+            <Action name="APHFPSGRAPH_TOGGLE">
+                <Down>APHFPSGraphCore.Toggle()</Down>
+            </Action>
+            <Action name="APHFPSGRAPH_RESET">
+                <Down>APHFPSGraphCore.ResetStats()</Down>
+            </Action>
+            <Action name="APHFPSGRAPH_FOCUS">
+                <Down>APHFPSGraphCore.Pad.ToggleFocus()</Down>
+            </Action>
+        </Category>
+    </Layer>
+    <Layer name="APHFPSGraph_Focus">
+        <Category>
+            <Action name="APHFPSGRAPH_PAD_UP" hideAction="true" inheritsBindFrom="UI_SHORTCUT_INPUT_UP">
+                <Down>return APHFPSGraphCore.Pad.Move(-1)</Down>
+            </Action>
+            <Action name="APHFPSGRAPH_PAD_DOWN" hideAction="true" inheritsBindFrom="UI_SHORTCUT_INPUT_DOWN">
+                <Down>return APHFPSGraphCore.Pad.Move(1)</Down>
+            </Action>
+            <Action name="APHFPSGRAPH_PAD_SELECT" hideAction="true" inheritsBindFrom="UI_SHORTCUT_PRIMARY">
+                <Down>return APHFPSGraphCore.Pad.Select()</Down>
+            </Action>
+            <Action name="APHFPSGRAPH_PAD_RECORD" hideAction="true" inheritsBindFrom="UI_SHORTCUT_SECONDARY">
+                <Down>return APHFPSGraphCore.Pad.Action("record")</Down>
+            </Action>
+            <Action name="APHFPSGRAPH_PAD_MENU" hideAction="true" inheritsBindFrom="UI_SHORTCUT_TERTIARY">
+                <Down>return APHFPSGraphCore.Pad.Action("menu")</Down>
+            </Action>
+            <Action name="APHFPSGRAPH_PAD_SUMMARY" hideAction="true" inheritsBindFrom="UI_SHORTCUT_LEFT_SHOULDER">
+                <Down>return APHFPSGraphCore.Pad.Action("summary")</Down>
+            </Action>
+            <Action name="APHFPSGRAPH_PAD_TIMELINE" hideAction="true" inheritsBindFrom="UI_SHORTCUT_RIGHT_SHOULDER">
+                <Down>return APHFPSGraphCore.Pad.Action("timeline")</Down>
+            </Action>
+            <Action name="APHFPSGRAPH_PAD_ZOOM_OUT" hideAction="true" inheritsBindFrom="UI_SHORTCUT_LEFT_TRIGGER">
+                <Down>return APHFPSGraphCore.Pad.Action("zoom_out")</Down>
+            </Action>
+            <Action name="APHFPSGRAPH_PAD_ZOOM_IN" hideAction="true" inheritsBindFrom="UI_SHORTCUT_RIGHT_TRIGGER">
+                <Down>return APHFPSGraphCore.Pad.Action("zoom_in")</Down>
+            </Action>
+            <Action name="APHFPSGRAPH_PAD_PAN_LEFT" hideAction="true" inheritsBindFrom="UI_SHORTCUT_INPUT_LEFT">
+                <Down>return APHFPSGraphCore.Pad.Action("pan_left")</Down>
+            </Action>
+            <Action name="APHFPSGRAPH_PAD_PAN_RIGHT" hideAction="true" inheritsBindFrom="UI_SHORTCUT_INPUT_RIGHT">
+                <Down>return APHFPSGraphCore.Pad.Action("pan_right")</Down>
+            </Action>
+            <Action name="APHFPSGRAPH_PAD_MOVE" hideAction="true" inheritsBindFrom="UI_SHORTCUT_RIGHT_STICK">
+                <Down>return APHFPSGraphCore.Pad.Action("move")</Down>
+            </Action>
+            <Action name="APHFPSGRAPH_PAD_RESIZE" hideAction="true" inheritsBindFrom="UI_SHORTCUT_LEFT_STICK">
+                <Down>return APHFPSGraphCore.Pad.Action("resize")</Down>
+            </Action>
+            <Action name="APHFPSGRAPH_PAD_BACK" hideAction="true" inheritsBindFrom="UI_SHORTCUT_NEGATIVE">
+                <Down>return APHFPSGraphCore.Pad.Action("back")</Down>
+            </Action>
+        </Category>
+    </Layer>
+</Bindings>
